@@ -49,7 +49,7 @@ const playGame = () => {
 
   let scoreDraw = `Ничья...`;
   let scoreWin = `Ты победил!`;
-  let scoreLose = `Ты с проебал.`;
+  let scoreLose = `Ты проебал.`;
 
   for (let i = 0; i < 5; i++) {
     playRound();
