@@ -54,12 +54,8 @@ const getComputerChoice = () => {
 
 function playRound(humanChoice) {
   let computerChoice = getComputerChoice();
-  let resultValueWin = `Ты выиграл раунд! Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
-  let resultValueLose = `Ты проиграл раунд. Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
-  let resultValueDraw = `Ничья, компьютер тоже выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
 
   if (humanChoice.toLowerCase() === computerChoice) {
-    // resultValue.innerHTML = resultValueDraw;
     resultValue.innerHTML = `Ничья, компьютер тоже выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
   } else if (
     (humanChoice === "камень" && computerChoice === "ножницы") ||
@@ -67,11 +63,9 @@ function playRound(humanChoice) {
     (humanChoice === "бумага" && computerChoice === "камень")
   ) {
     humanScore++;
-    // resultValue.innerHTML = resultValueWin;
-    resultValue.innerHTML = `Ты проиграл раунд. Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
+    resultValue.innerHTML = `Ты выиграл раунд! Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
   } else {
     computerScore++;
-    // resultValue.innerHTML = resultValueLose;
     resultValue.innerHTML = `Ты проиграл раунд. Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
   }
 
