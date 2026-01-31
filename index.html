@@ -3,10 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Камень, ножницы, бумага</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="table">
+      <div class="pop-up start">
+        <h1>Привет!</h1>
+        <p>
+          Не знаю что ты здесь делаешь, но раз уж что-то делаешь, давай
+          сыграем!<br /><br />
+          У меня здесь просто камень - ножницы - бумага<br /><br />Правила ты
+          знаешь, а играть будем до 3-х побед.
+        </p>
+        <button id="start">Погнали</button>
+      </div>
+      <div id="computer-choice" class="computer side">
+        Компьютер сделал свой выбор
+      </div>
+      <div class="result side">
+        Выбирай чем будешь биться ты!<br />
+        <p>пасхалка</p>
+      </div>
+      <div class="human side">
+        <div id="human-choice-btns" class="human question">
+          <button class="btn human-rock">Камень</button>
+          <button class="btn human-papper">Ножницы</button>
+          <button class="btn human-scissors">Бумага</button>
+        </div>
+        <div id="human-choice" class="human answer hide">Ты выбрал камень</div>
+      </div>
+    </div>
     <script src="/main.js"></script>
   </body>
 </html>
