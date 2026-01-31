@@ -59,17 +59,20 @@ function playRound(humanChoice) {
   let resultValueDraw = `Ничья, компьютер тоже выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
 
   if (humanChoice.toLowerCase() === computerChoice) {
-    resultValue.innerHTML = resultValueDraw;
+    // resultValue.innerHTML = resultValueDraw;
+    resultValue.innerHTML = `Ничья, компьютер тоже выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
   } else if (
     (humanChoice === "камень" && computerChoice === "ножницы") ||
     (humanChoice === "ножницы" && computerChoice === "бумага") ||
     (humanChoice === "бумага" && computerChoice === "камень")
   ) {
-    resultValue.innerHTML = resultValueWin;
     humanScore++;
+    // resultValue.innerHTML = resultValueWin;
+    resultValue.innerHTML = `Ты проиграл раунд. Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
   } else {
-    resultValue.innerHTML = resultValueLose;
     computerScore++;
+    // resultValue.innerHTML = resultValueLose;
+    resultValue.innerHTML = `Ты проиграл раунд. Компьютер выбрал вариант "${computerChoice}"<br>Счёт ${humanScore}:${computerScore}`;
   }
 
   if (humanScore >= 3 || computerScore >= 3) {
